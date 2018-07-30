@@ -19,8 +19,8 @@ namespace Rps
             {
                 game.p1.Choice = game.GetUerInput();
                 game.p2.Choice = aiMove.RandChoice();
-                Console.WriteLine(game.p1.Choice);
-                Console.WriteLine(game.p2.Choice);
+
+                game.TurnFinished();
 
             } while (game.TotalTurn > 0);
 

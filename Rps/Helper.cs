@@ -5,6 +5,7 @@ namespace Rps
     {
         public static bool RpsValidation(char input)
         {
+
             char inputUpper = Char.ToUpper(input);
 
             if (inputUpper != 'R' && inputUpper != 'P' && inputUpper != 'S')

@@ -37,5 +37,20 @@ namespace Rps
             return Helper.ConvertInput(inputChar);
 
         }
+
+        public void TurnFinished()
+        {
+            Player winner = Rule.Winner(p1, p2);
+
+            string choicesMessage = Message.TurnFinished(p1.Name, p1.Choice, p2.Name, p2.Choice);
+            string winnerMessage = Message.TurnWinner(winner);
+
+            Console.WriteLine(choicesMessage);
+            Console.WriteLine(winnerMessage);
+
+            totalTurn--;
+        }
+
+
     }
 }
