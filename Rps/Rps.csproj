@@ -42,6 +42,9 @@
     <Compile Include="Player.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="UnitTests\GameTest.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="UnitTests\MessageTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

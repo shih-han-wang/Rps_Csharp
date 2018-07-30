@@ -10,6 +10,8 @@ namespace Rps
             Player p2 = new Player("Computer");
 
             Game game = new Game(p1, p2);
+
+            Console.WriteLine(Message.StartGame());
         }
     }
 }
