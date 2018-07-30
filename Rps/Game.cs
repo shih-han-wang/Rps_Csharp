@@ -21,20 +21,21 @@ namespace Rps
             get { return totalTurn; }
         }
 
-        public Moves GetUerInput()
+        public Moves GetUserInput()
         {
-            string userInput;
-            char inputChar;
+            char userInput;
 
             do
             {
                 Console.WriteLine(Message.StartGame());
-                userInput = Console.ReadLine();
-                inputChar = Convert.ToChar(userInput);
+                if (!char.TryParse(Console.ReadLine(), out userInput))
+                {
+                    Console.WriteLine("It is not an character");
+                }
 
-            } while (!Helper.RpsValidation(inputChar));
+            } while (!Helper.RpsValidation(userInput));
 
-            return Helper.ConvertInput(inputChar);
+            return Helper.ConvertInput(userInput);
 
         }
 
