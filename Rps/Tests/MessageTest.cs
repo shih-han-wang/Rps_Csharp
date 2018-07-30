@@ -38,7 +38,7 @@ namespace Rps.Tests
         }
 
         [Test]
-        public void ReturnWinnerMessage()
+        public void ReturnTurnWinnerMessage()
         {
             string expected = "User won this turn!";
 
@@ -50,5 +50,28 @@ namespace Rps.Tests
 
         }
 
+        [Test]
+        public void ReturnGameTieMessage()
+        {
+
+            string expected = "Game Over. It's a tie.";
+            string output = Message.GameWinner(null);
+
+            Assert.That(output, Is.EqualTo(expected));
+
+        }
+
+        [Test]
+        public void ReturnGameWinnerMessage()
+        {
+            
+            string expected = "Game Over. Computer won!";
+
+            Player p1 = new Player("Computer");
+            string output = Message.GameWinner(p1);
+
+            Assert.That(output, Is.EqualTo(expected));
+
+        }
     }
 }

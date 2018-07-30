@@ -30,5 +30,13 @@ namespace Rps
             else
                 return $"{winner.Name} won this turn!";
         }
+
+        public static string GameWinner(Player winner)
+        {
+            if (winner == null)
+                return "Game Over. It's a tie.";
+            else
+                return $"Game Over. {winner.Name} won!";
+        }
     }
 }
