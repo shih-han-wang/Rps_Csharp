@@ -48,6 +48,8 @@
     <Compile Include="Tests\HelperTest.cs" />
     <Compile Include="AIMove.cs" />
     <Compile Include="Tests\AIMoveTest.cs" />
+    <Compile Include="Rule.cs" />
+    <Compile Include="Tests\RuleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
