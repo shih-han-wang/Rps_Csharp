@@ -12,5 +12,23 @@ namespace Rps
             
             return message;
         }
+
+        public static string TurnFinished(string p1name, Moves p1choice, string p2name, Moves p2choice)
+        {
+            string message =
+                $"{p1name}'s choice: {p1choice} " +
+                $"{Environment.NewLine}" +
+                $"{p2name}'s choice: {p2choice}";
+
+            return message;
+        }
+
+        public static string TurnWinner(Player winner)
+        {
+            if (winner == null)
+                return "This turn is a tie.";
+            else
+                return $"{winner.Name} won this turn!";
+        }
     }
 }

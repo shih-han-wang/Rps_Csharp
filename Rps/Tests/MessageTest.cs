@@ -16,5 +16,39 @@ namespace Rps.Tests
 
         }
 
+        [Test]
+        public void TurnFinishedMessage()
+        {
+            
+            string output = Message.TurnFinished("User", Moves.Rock, "Computer", Moves.Paper);
+            string expected = "User's choice: Rock \nComputer's choice: Paper";
+            Assert.That(output, Is.EqualTo(expected));
+
+        }
+
+        [Test]
+        public void ReturnTurnTieMessage()
+        {
+            
+            string expected = "This turn is a tie.";
+            string output = Message.TurnWinner(null);
+
+            Assert.That(output, Is.EqualTo(expected));
+           
+        }
+
+        [Test]
+        public void ReturnWinnerMessage()
+        {
+            string expected = "User won this turn!";
+
+            Player p1 = new Player("User");
+            string output = Message.TurnWinner(p1);
+
+
+            Assert.That(output, Is.EqualTo(expected));
+
+        }
+
     }
 }
