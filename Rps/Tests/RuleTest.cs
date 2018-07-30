@@ -38,5 +38,13 @@ namespace Rps.Tests
             Assert.That(winner4, Is.Null);
         }
 
+        [Test]
+        public void AddScoreToWinner()
+        {
+            Rule.Winner(p1, p2);
+            Assert.That(p1.score, Is.EqualTo(0));
+            Assert.That(p2.score, Is.EqualTo(1));
+        }
+
     }
 }
