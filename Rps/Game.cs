@@ -30,7 +30,7 @@ namespace Rps
                 Console.WriteLine(Message.StartGame());
                 if (!char.TryParse(Console.ReadLine(), out userInput))
                 {
-                    Console.WriteLine("It is not an character");
+                    Console.WriteLine("This is not a character");
                 }
 
             } while (!Helper.RpsValidation(userInput));
