@@ -21,18 +21,19 @@ namespace Rps
 
         public Modes UserChooseMode()
         {
-            string userInput;
-            char inputChar;
+            char userInput;
 
             do
             {
                 Console.WriteLine(Message.ChooseMode());
-                userInput = Console.ReadLine();
-                inputChar = Convert.ToChar(userInput);
+                if (!char.TryParse(Console.ReadLine(), out userInput))
+                {
+                    Console.WriteLine("It is not an character");
+                }
 
-            } while (!Helper.ChooseModeValidation(inputChar));
+            } while (!Helper.ChooseModeValidation(userInput));
 
-            return Helper.ConvertModeInput(inputChar);
+            return Helper.ConvertModeInput(userInput);
 
         }
 
