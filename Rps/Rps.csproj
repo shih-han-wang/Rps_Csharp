@@ -46,6 +46,8 @@
     <Compile Include="Helper.cs" />
     <Compile Include="Tests\MessageTest.cs" />
     <Compile Include="Tests\HelperTest.cs" />
+    <Compile Include="AIMove.cs" />
+    <Compile Include="Tests\AIMoveTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
