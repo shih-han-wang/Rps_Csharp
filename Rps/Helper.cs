@@ -37,5 +37,37 @@ namespace Rps
 
             return result;
         }
+
+        public static bool ChooseModeValidation(char input)
+        {
+
+            char inputUpper = Char.ToUpper(input);
+
+            if (inputUpper != 'R' && inputUpper != 'T')
+            {
+                Console.WriteLine("Please enter the valid character");
+                return false;
+            }
+
+            return true;
+
+        }
+
+        public static Modes ConvertModeInput(char input)
+        {
+            Modes result = 0;
+
+            switch (Char.ToUpper(input))
+            {
+                case 'R':
+                    result = Modes.Random;
+                    break;
+                case 'T':
+                    result = Modes.Tactical;
+                    break;
+            }
+
+            return result;
+        }
     }
 }
