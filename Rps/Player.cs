@@ -6,7 +6,7 @@ namespace Rps
         private string name;
         public int score;
 
-        //public Moves Choice { get; set; }
+        public Moves Choice { get; set; }
 
         public Player(string nameInput)
         {

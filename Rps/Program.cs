@@ -11,7 +11,15 @@ namespace Rps
 
             Game game = new Game(p1, p2);
 
-            Console.WriteLine(Message.StartGame());
+            int totalTurn = game.TotalTurn;
+            int halfTurn = (int)Math.Ceiling((double)totalTurn / 2);
+
+            do
+            {
+                game.p1.Choice = game.GetUerInput();
+
+            } while (game.TotalTurn > 0);
+
         }
     }
 }

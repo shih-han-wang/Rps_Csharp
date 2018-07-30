@@ -20,5 +20,22 @@ namespace Rps
         {
             get { return totalTurn; }
         }
+
+        public Moves GetUerInput()
+        {
+            string userInput;
+            char inputChar;
+
+            do
+            {
+                Console.WriteLine(Message.StartGame());
+                userInput = Console.ReadLine();
+                inputChar = Convert.ToChar(userInput);
+
+            } while (!Helper.RpsValidation(inputChar));
+
+            return Helper.ConvertInput(inputChar);
+
+        }
     }
 }
