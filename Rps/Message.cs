@@ -3,6 +3,11 @@ namespace Rps
 {
     public class Message
     {
+        public static string ChooseMode()
+        {
+            return "Please choose mode: r (Random Computer Player) or t (Tactical Computer Player)";
+        }
+
         public static string StartGame()
         {
             string message = "Please choose ";

@@ -8,6 +8,15 @@ namespace Rps.Tests
     {
 
         [Test]
+        public void ChooseModeMessage()
+        {
+
+            string expected = "Please choose mode: r (Random Computer Player) or t (Tactical Computer Player)";
+            Assert.That(Message.ChooseMode(), Is.EqualTo(expected));
+
+        }
+
+        [Test]
         public void StartGameMessage()
         {
 
