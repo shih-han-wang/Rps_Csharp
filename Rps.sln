@@ -3,6 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rps", "Rps\Rps.csproj", "{99EB50AA-2A17-42B8-A195-6E13A0903D41}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B3C6187-961C-4CC0-937A-DC37263311B7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		RPS_Console.png = RPS_Console.png
+		RPS_Tests.png = RPS_Tests.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
