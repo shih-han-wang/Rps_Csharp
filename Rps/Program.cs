@@ -6,7 +6,10 @@ namespace Rps
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Player p1 = new Player("User");
+            Player p2 = new Player("Computer");
+
+            Game game = new Game(p1, p2);
         }
     }
 }
