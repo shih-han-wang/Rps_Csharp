@@ -51,6 +51,18 @@ namespace Rps
             totalTurn--;
         }
 
+        public void Over()
+        {
+            Player winner;
+
+            if (p1.score == p2.score)
+                winner = null;
+            else
+                winner = p1.score > p2.score ? p1 : p2;
+
+            Console.WriteLine(Message.GameWinner(winner));
+        }
+
 
     }
 }

@@ -22,7 +22,12 @@ namespace Rps
 
                 game.TurnFinished();
 
+                if (p1.score == halfTurn || p2.score == halfTurn)
+                    break;
+
             } while (game.TotalTurn > 0);
+
+            game.Over();
 
         }
     }
